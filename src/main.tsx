@@ -4,6 +4,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import App from './App.tsx';
 import AudiobookPercentage from './AudiobookPercentage.tsx';
+import About from './About.tsx';
+import Contact from './Contact.tsx';
 import Layout from './Layout.tsx';
 import './index.css';
 
@@ -19,6 +21,14 @@ const router = createBrowserRouter([
       {
         path: '/percentage',
         element: <AudiobookPercentage />,
+      },
+      {
+        path: '/about',
+        element: <About />,
+      },
+      {
+        path: '/contact',
+        element: <Contact />,
       },
     ],
   },

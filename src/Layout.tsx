@@ -44,7 +44,14 @@ function Layout() {
               >
                 Percentage Calculator
               </Link>
-              <a href="#" className="text-gray-600 hover:text-indigo-600">About</a>
+              <Link
+                to="/about"
+                className={`${
+                  isActive('/about') ? 'text-indigo-600' : 'text-gray-600'
+                } hover:text-indigo-600 font-medium`}
+              >
+                About
+              </Link>
               <a href="#" className="text-gray-600 hover:text-indigo-600">Contact</a>
             </nav>
           </div>
@@ -70,8 +77,24 @@ function Layout() {
                 >
                   Percentage Calculator
                 </Link>
-                <a href="#" className="text-gray-600 hover:text-indigo-600">About</a>
-                <a href="#" className="text-gray-600 hover:text-indigo-600">Contact</a>
+                <Link
+                  to="/about"
+                  className={`${
+                    isActive('/about') ? 'text-indigo-600' : 'text-gray-600'
+                  } hover:text-indigo-600 font-medium`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  About
+                </Link>
+                <Link
+                  to="/contact"
+                  className={`${
+                    isActive('/contact') ? 'text-indigo-600' : 'text-gray-600'
+                  } hover:text-indigo-600 font-medium`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Contact
+                </Link>
               </div>
             </div>
           )}
