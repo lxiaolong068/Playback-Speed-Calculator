@@ -52,7 +52,14 @@ function Layout() {
               >
                 About
               </Link>
-              <a href="#" className="text-gray-600 hover:text-indigo-600">Contact</a>
+              <Link
+                to="/contact"
+                className={`${
+                  isActive('/contact') ? 'text-indigo-600' : 'text-gray-600'
+                } hover:text-indigo-600 font-medium`}
+              >
+                Contact
+              </Link>
             </nav>
           </div>
           {/* Mobile menu */}
